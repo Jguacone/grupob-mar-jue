@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css</title>
+    <style>
+        /* (2) Armo regla CSS */
+        h1{
+            color:red; 
+            font-size:100px;
+        }
+      </style>
+      <!-- (3) link a archivo externo al html -->
+      <link rel="stylesheet" href="../css/css.styles.css">
+  </head>
+<body>
+    <main>
+        <section>
+            <!--(1) Estilo inline -->
+            <h1 style="color:blue">
+                Hola Css
+            </h1>
+            <p id="miTexto">
+                Vamos a dar estilos
+            </p>
+        </section>
+        <section>
+            <h2>
+                Subtitulo 1
+            </h2>
+        </section>
+        <section class="miSection Texto-centrado">
+            <h2>
+                Subtitulo 2
+            </h2>
+            <p id="miTexto2">
+                Lorem ipsum, dolor sit amet consectetur
+            </p>
+            <div>
+                <p id="miTexto3">
+                    Lorem ipsum, dolor sit amet consectetur
+                </p>
+                <div class="link">
+                    <a href="#">Link a algo</a>
+                </div>
+            </div>
+        </section>
+        <!--Tengo que darle margen para que la serie aparezca numerada ya que al selector universal le pusimos margin:0px-->
+        <section class="lista">
+            <ol>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+            </ol>
+            <ul>
+                <li>X</li>
+                <li>Y</li>
+                <li>Z</li>
+            </ul>
+        </section>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+/*Selectores descendientes*/
+div p{
+    color:red;
+    font-size: 30px;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 50px;
+    border: 1px solid red;
+    text-align: center;
+    height: 100px;
+}
+
+div p.p2 {
+    color:green;
+    height: 50px;
+}
+
+div p#p2 {
+    color:blue;
+    height: 50px;
+}
+
+/* selector descendiente con selector hijo (lo que sigue a ">") */
+section p > strong {
+color: red;
+}
+
+/*Selectores hermanos */
+/*h1 y p son hijos de aside que están en la clase selectores_hermanos.*/
+/*Lo siguiente se lee "después de h1 todos los hermanitos p que tengan color de fondo amarillo"*/
+.selectores_hermanos aside h1 ~ p{
+background-color: yellow;
+} 
+
+/* Pseudoclases */
+/*hover: cuando le paso el mouse por encima se pone el fondo azul*/
+.links a:hover {
+background-color: blue;
+}
+/*visited: una vez clickeado el link se pone la letra en color yellowgreen*/
+.links a:visited {
+    color: yellowgreen;
+}
+/*active: cuando cliqueo y mantengo apretado se queda en color rojo*/
+.links a:active {
+    color: red;
+}
+/*link: cuando el link no fue visitado está de color rosa*/
+.links a:link {
+    color: pink;
+}
+    
