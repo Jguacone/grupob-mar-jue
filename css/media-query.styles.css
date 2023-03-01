@@ -1,0 +1,65 @@
+/*variable css*/
+:root {
+    --comafi-primary-color: blue;
+    --comafi-primary-font: 'Ubuntu';
+    /*font-size: 16px;*/
+    font-size: 10px;
+    --comafi-backgrond-color: #9c9393;
+}
+
+/**/
+body {
+    font-family: var(--comafi-primary-font);
+    /*medidas px | rem*/
+    /*el 2 es relativo al root element, o sea lo que trae por defecto el browser (16px)*/
+    font-size: 2rem; /*1 rem = 16px*/
+}
+
+h1 {
+    color: var(--comafi-primary-color);
+}
+    
+section {
+    font-size: 20px;
+}
+
+section p {
+    font-size: 2em;
+}
+
+/*medias query*/
+
+/*Se ejecuta cuando le doy Imprimir a la página*/
+@media print {
+    :root {
+        --comafi-primary-color: green;
+        font-size: 5px;
+    }
+    section {
+        font-size: 10px;
+    }
+}
+
+header ul {
+    display: flex;
+}
+
+/*media query para browser*/
+@media screen and (max-width:576px){
+    header ul { 
+        display: flex;      
+        /*Cuando el ancho de la pantalla sea menor a 576 los items pasan a modo columnas*/  
+        flex-direction: column;
+    }
+}
+/*rango*/
+@media screen and (min-width:576px) and (max-width:768px) {
+    header ul { 
+        display: flex;        
+        /*cambio para que los items se vean uno a lado del otro*/
+        flex-direction: row;
+    }
+    section p{
+        color: rgb(106, 255, 0);
+    }
+}

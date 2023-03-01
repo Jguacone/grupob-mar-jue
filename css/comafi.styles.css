@@ -1,0 +1,138 @@
+/*Agrego fuentes de google*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+.top_menu {
+    width: 100%;
+    /*background-color: antiquewhite;*/ 
+    height: 30px;
+    display: flex;
+    font-size: 10px;
+    /*Para centrar elementos en el eje vertical*/
+    align-items: center;
+    /*Para ubicar elementos en el eje horizontal*/
+    justify-content: space-evenly;
+}
+
+.top_menu #rojo {
+    background-color: red;
+}
+.top_menu button {
+    border: 0;
+    padding: 3px 7px;
+    margin: 1px;
+    color:white;
+}
+.top_menu .gris {
+    background-color: gray;
+}
+
+.top_menu_links ul {
+    /*Indicamos el el contenedor de lista desordenada que está en la calse top_menu va a ser de tipo Flex*/
+    display: flex;
+    /*Y que los elementos del mismo van a la derecha*/
+    justify-content: flex-end;
+}
+
+.top_menu_links li{
+    margin: 5px;
+}
+
+.top_menu_links a{
+    color:grey;
+}
+.top_menu_links a:hover{
+    color: black
+}
+
+/*estilos del logo link y formularios*/
+.logo_menu_boton {
+    display: flex;
+    align-items: center;/*strech|center|flext-start|flex-end. Por defecto tiene strech y  lo que hace es estirar el contenido de los elementos en el eje 
+    vertical hasta la altura del item con mayor altura. dandole center no se deforman*/
+   /*Para que se separen los itmes, es como darles un margen, pero como son elementos flex usamos justify-content*/
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.logo_menu_boton a{
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 2px;
+    font-weight: 500;
+    color: black;
+}
+.logo_menu_boton a:hover{
+    color: #789c48;
+}
+.active {
+    color: #789c48 !important;
+}
+
+.logo_menu_boton ul {
+    display: flex;
+}
+
+.logo_menu_boton ul a::after {
+    content: ' |';
+}
+
+/*css de secciones*/
+.secciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #789c48;
+}
+.secciones a {
+    color: rgba(255,255,255,.8);
+    font-size: 14px;
+    font-weight: 100;
+    margin: 0 10px;
+}
+
+
+.sofiacontainer {
+    display: flex;
+    /*Para que se separe 10px desde el margen derecho*/
+    right: 10px;
+    /*Para que esté en la mitad del eje vertical de lo que ocupa el body*/
+    top:50%;
+    /*el position:fixed es para dejarlo al right y al top que definí*/
+    position: fixed;
+    /*Para que las cajas se alineen verticalmente y el "p" quede encima del "img"*/
+    flex-direction: column;
+    width: 150px;
+    height: 70px;
+    align-items: flex-end;
+    /*cuanto mayor el Z-index más adelante está el objeto respcto a los otros en caso de solapamiento*/
+    z-index: 99;
+}
+
+.sofiacontainer > div.sofia3dhelp {
+    height: 30px;
+    background-color: #789c48;
+    padding: 10px;
+    /* border-radius: 50% 10% 50% 10%;  */
+    color:white;
+    /*Lo dejamos oculto al div que tiene el texto*/
+    visibility: hidden;
+}
+
+/*Cuando pasamos el mouse por encima de sofia container se pone visible el div.sofia container*/
+.sofiacontainer:hover > div.sofia3dhelp {
+    visibility: visible;
+}

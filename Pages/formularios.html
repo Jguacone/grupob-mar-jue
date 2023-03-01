@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h2>
+                Buscador
+            </h2>
+            <!--Con fieldset hacemos que se recuadre el formulario-->
+            <fieldset>
+                <!--Con la etiqueta legend puedo hacer que se ponga un texto sobre la linea del recuadro-->
+                <legend>
+                    Buscador de algo
+                </legend>
+                <form action="formularios.html" method="post">
+                    <input type="search">
+                    <button type="submit">Buscar</button>
+                </form>
+                
+            </fieldset>
+        </section>
+        <section>
+            <!--Con fieldset hacemos que se recuadre el formulario-->
+            <fieldset>
+                <!--Con la etiqueta legend puedo hacer que se ponga un texto sobre la linea del recuadro-->
+                <legend>
+                    login
+                </legend>
+                <form action="formularios.html" method="post">
+                    <div>
+                        <label for="usuario">Usuario: </label>
+                        <input type="text" 
+                                id="usuario"
+                                name="usuario">
+                    </div>
+                    <div>
+                        <label for="pws">Contraseña: </label>
+                        <input type="password" 
+                                id="pws"
+                                name="pws">
+                    </div>
+                    <button type="submit">Entrar</button>
+                </form>
+                
+            </fieldset>
+        </section>
+        <section>
+            <h2>
+                Alta de Persona
+            </h2>
+            <!--Con fieldset hacemos que se recuadre el formulario-->
+            <fieldset>
+                <legend>
+                    Datos Personales
+                </legend>
+                <!--en el atributo action se pone la URL a la que se van a enviar los datos, acá ponemos la misma página como para poner algo, se autoenvía información -->
+                <!--con method GET se muestran los parametros ingresados en la url del navegador-->
+                <form action="formularios.html" method="get">
+                    <!--el input de tipo hidden no tiene representación gráfica pero SI se envía en el formulario-->
+                    <input type="hidden"
+                            id="codigo"
+                            name="codigo"
+                            value="123">
+                    <div>                
+                        <label for="apellido">Apellido: </label>
+                        <!--con required se indica que el campo es obligatorio-->    
+                        <input id="apellido" 
+                                name="apellido"
+                                required
+                                type="text">
+                    </div>
+                    <div>
+                        <label for="edad">Edad: </label>
+                        <input id="edad" 
+                                name="edad"
+                                type="number">
+                    </div>
+                    <div>
+                        <label for="fecnac">Fecha de nacimiento: </label>
+                        <input id="fecnac" 
+                                name="fecnac"
+                                type="date">                   
+                    </div>
+                    <div>
+                        <label>intereses: </label>
+                        <div>
+                            Musica 
+                            <input 
+                            type="checkbox" 
+                            name="MUSICA"
+                            value="true">                   
+                            Peliculas 
+                            <input 
+                            type="checkbox" 
+                            name="PELICULAS"
+                            value="True">
+                            Juegos 
+                            <input 
+                            type="checkbox"
+                            name="JUEGOS" 
+                            value="True">
+                        </div>
+                    </div>
+                    <div>
+                        <!--Para los elementos de tipo radio para que sean excluyentes las opciones tienen que llamarse igual-->
+                        <label>Sexo: </label>
+                        <div>
+                            <label for="Masculino">Masculino</label>
+                            <input type="radio" 
+                                name="SEXO"
+                                id="masculino"
+                                value="MASCULINO">
+                            <label for="femenino">Femenino</label>
+                            <input type="radio" 
+                                name="SEXO" 
+                                id="femenino"
+                                value="FEMENINO">
+                        </div>
+                    </div>
+                    <!--Asigno como color inicial el color blanco-->
+                    <div>
+                        <input type="color" value="#ffffff">
+                    </div>
+                    <!--Para los input de tipo email se valida que sea un formato válido de mail-->
+                    <div>
+                        <label for="mail">Correo electrónico: </label>
+                        <!--El atributo placeholder lo usamos para que se visualice algo pero no se envía en el formulario-->
+                        <input type="email" 
+                               id="mail" 
+                               name="mail"
+                               placeholder="email@email.com">
+                    </div>
+                    <div>
+                        <label for="descripcion">Descripción: </label>
+                        <div>
+                            <textarea id="descripcion" cols="20" rows="10"></textarea>
+                        </div>    
+                    </div>
+                    <div>
+                        <!--el select presenta un combo con los elementos option-->
+                        <!--el atributo selected hace que aparezca ese elemento seleccionado por defecto-->
+                        <label for="pais">Pais: </label>
+                        <select id="pais" name="pais">
+                            <option value="ARG">Argentina</option>
+                            <option value="BRA" selected>Brasil</option>
+                            <option value="GER">Alemania</option>
+                            <option value="NED">Holanda</option>
+                            <option value="PAR">Paraguay</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="adjunto">Adjuntar archivo: </label>
+                        <!--El input de tipo file se usa para seleecionar un archivo-->
+                        <div>
+                            <input type="file"
+                                    id="adjunto">
+                        </div>
+                    </div>
+
+                    <button type="submit">
+                        Enviar
+                    </button>
+                    <button type="reset">
+                        Limpiar
+                    </button>
+                </form>
+            </fieldset>
+        </section>
+    </main>
+    
+</body>
+</html>

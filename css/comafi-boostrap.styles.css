@@ -1,0 +1,30 @@
+.producto-item{
+    background: url('../images/imagen de fondo.jpg');
+    height: 150px;
+    display:flex;
+    justify-content: center;
+    /*para que no se estiren los elementos a lo alto*/
+    align-items: center;
+    /*Para que los elementos se alineen verticalmente*/
+    flex-direction: column;
+    
+   }
+
+.producto-item p {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.producto-item button {
+    background-color: gray;
+    border: none;
+    color: #fff;
+    height: 3rem;
+}
+
+.miicono {
+    /*para agrandar el tamaño que trae por default el ícono*/
+    font-size: 50px;
+    /*para cambiar el color del ícono*/
+    color:red;
+}

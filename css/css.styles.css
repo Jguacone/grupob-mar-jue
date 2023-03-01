@@ -1,0 +1,63 @@
+
+/* Selector universal (le afecta a todos los elementos)*/
+* {
+margin: 0px;/*separacion entre las cajas y los bordes*/
+padding: 0px;/*separación entre el contenido y la caja*/
+}
+
+/* Selectores por id */
+/*Son para los que tienen el atributo id y se referencia con el # */
+/*solo se puede aplicar a un elemento (el que tiene el id)*/
+#miTexto{
+color:blueviolet;
+font-size: 20px;
+text-transform: uppercase; /*lowercase | Capitalize */
+}
+
+/*Selectores por tipo*/
+h1 {
+    color:green;
+}
+
+p {
+    display:inline;/*Para que los parrafos se muestren uno al lado del otro*/
+    text-decoration: underline;
+    /*cursor: pointer; es para que aparezca el puntero cuando se pasa el mouse encima*/
+
+}
+
+/*Selectores por clase*/
+/*Son para los que tienen el atributo class y se hace referencia con el punto*/
+/*Se puede aplicar a un grupo de elementos (a todos los que tiene la misma clase)*/
+.miSection{
+background-color: antiquewhite;
+}
+
+.Texto-centrado{
+    text-align: center;
+}
+
+.link{
+text-align: right;
+border: 1px solid black;
+}
+
+/*Tomo los elementos h2 dentro de la clase .miSection*/
+.miSection h2{
+    text-align: left;
+}
+
+.lista{
+    margin-left: 30px;
+}
+
+.lista ul{
+    list-style-type: square;
+}
+
+.propiedades{
+    border-radius ;
+}
+
+
+

@@ -1,0 +1,81 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+}
+
+.Formacion{
+
+}
+
+
+
+#foto_cv{
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+.Personal h1 {
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*el inline-block se usa para poder darle dimensión*/
+.Personal div{
+    display: inline-block;
+}
+
+.Personal_Right {
+    background-color: black;
+    width: 15%;
+    text-align: left;
+    padding: 3px;
+    }
+.Personal_Left {
+    background-color:blueviolet;
+    width: 74%;
+    height: auto;
+    margin-top: 0px;
+    
+    }
+
+.Principal {
+    padding-top: 25px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 95%
+}
+
+.Personal hr#l1 {
+    height: 10px;
+    background-color: pink;
+}
+
+.Personal hr#l2 {
+    height: 15px;
+    background-color: orange;
+}
+
+.Personal hr#l3 {
+    height: 10px;
+    background-color:brown;
+}
+
+.Formacion{
+    margin-top: 20px;
+}
+
+.Personal_Left_Campo {
+    text-align: right;
+}
+
+.Formacion_Experiencia table {
+    margin: 0 auto; /*Para centrar el contenido*/
+    width: 70%;
+}
+
+.Formacion_Experiencia table h2 {
+    text-align: right;
+    padding-right: 10px;
+}
